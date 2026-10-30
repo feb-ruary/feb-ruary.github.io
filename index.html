@@ -18,7 +18,7 @@
 }
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth;background:var(--bg)}
-body{margin:0;color:var(--ink);font:400 1rem/1.7 var(--mono);background:radial-gradient(900px 520px at 90% -10%,rgba(0,71,48,.85),transparent 70%),var(--bg)}
+body{margin:0;color:var(--ink);text-transform:lowercase;font:400 1rem/1.7 var(--mono);background:radial-gradient(900px 520px at 90% -10%,rgba(0,71,48,.85),transparent 70%),var(--bg)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
@@ -60,7 +60,7 @@ h2::before{content:"// ";color:var(--pink)}
 .field input,.field textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;font:inherit;color:var(--paper);background:transparent;border:1px solid var(--line);border-radius:0}
 .field textarea{min-height:110px;resize:vertical}
 .field input:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.submit{font:inherit;font-weight:700;cursor:pointer;background:var(--gold);color:var(--bg);border:0;padding:13px 28px;
+.submit{font:inherit;text-transform:lowercase;font-weight:700;cursor:pointer;background:var(--gold);color:var(--bg);border:0;padding:13px 28px;
   clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
 .submit:hover{background:var(--pink)}
 #note{margin-top:14px;min-height:1.7em;color:var(--gold)}
@@ -82,13 +82,13 @@ html:not(.ready){overflow:hidden}
 
 @media(max-width:600px){.rows a{grid-template-columns:1fr}nav ul li:nth-child(1),nav ul li:nth-child(3){display:none}}
 @media(prefers-reduced-motion:no-preference){
-  .ready .glitch{animation:jit 5s 1.2s infinite}
-  .ready .glitch::before{animation:g1 5s 1.2s infinite}.ready .glitch::after{animation:g2 5s 1.2s infinite}
+  .ready .glitch{animation:jit 2.4s 1.2s infinite}
+  .ready .glitch::before{animation:g1 2.4s 1.2s infinite}.ready .glitch::after{animation:g2 2.4s 1.2s infinite}
   .ready .sub,.ready .btn{animation:up .7s .4s both}
   @keyframes up{from{opacity:0;transform:translateY(14px)}}
-  @keyframes jit{0%,92%,100%{transform:none}93%{transform:translate(2px,0)}95%{transform:translate(-2px,1px)}97%{transform:none}}
-  @keyframes g1{0%,90%,100%{clip-path:inset(0 0 100% 0);transform:none}92%{clip-path:inset(10% 0 60% 0);transform:translate(-9px,0)}95%{clip-path:inset(40% 0 20% 0);transform:translate(7px,0)}97%{clip-path:inset(0 0 100% 0);transform:none}}
-  @keyframes g2{0%,91%,100%{clip-path:inset(100% 0 0 0);transform:none}93%{clip-path:inset(70% 0 5% 0);transform:translate(9px,0)}96%{clip-path:inset(25% 0 50% 0);transform:translate(-7px,0)}98%{clip-path:inset(100% 0 0 0);transform:none}}
+  @keyframes jit{0%,80%,96%,100%{transform:none}83%{transform:translate(2px,0)}87%{transform:translate(-2px,1px)}91%{transform:translate(1px,-1px)}}
+  @keyframes g1{0%,78%,94%,100%{clip-path:inset(0 0 100% 0);transform:none}81%{clip-path:inset(10% 0 60% 0);transform:translate(-9px,0)}86%{clip-path:inset(40% 0 20% 0);transform:translate(7px,0)}90%{clip-path:inset(25% 0 50% 0);transform:translate(-6px,0)}}
+  @keyframes g2{0%,79%,95%,100%{clip-path:inset(100% 0 0 0);transform:none}82%{clip-path:inset(70% 0 5% 0);transform:translate(9px,0)}87%{clip-path:inset(25% 0 50% 0);transform:translate(-7px,0)}92%{clip-path:inset(55% 0 20% 0);transform:translate(6px,0)}}
 }
 @media(prefers-reduced-motion:reduce){.cursor{animation:none}}
 </style>
@@ -113,8 +113,8 @@ html:not(.ready){overflow:hidden}
   <div class="hero">
     <div class="wrap">
       <h1 class="glitch" data-text="february">february</h1>
-      <p class="sub">Cybersecurity and sysadmin stuff. If I can break it, then I can fix it.</p>
-      <a class="btn" href="#work">View work</a>
+      <p class="sub">cybersecurity and sysadmin stuff</p>
+      
     </div>
   </div>
 
